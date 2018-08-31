@@ -1,0 +1,17 @@
+import unittest
+from models import source
+Source = source.Source
+class SourceTest(unittest.TestCase):
+    '''
+    test class to test the source class
+    '''
+    def setUp(self):
+        '''
+        setup method always runs after every test
+        '''
+        self.new_source = Source(12,'BBC')
+    def test_for_instance(self):
+        self.assertTrue(isinstance(self.new_source,Source))
+
+if __name__=='__main__':
+    unittest.main()
