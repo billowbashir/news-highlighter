@@ -10,7 +10,12 @@
     {%endif%}
   </head>
   <body>
-
+    <h2>News Sources</h2>
+    <ul>
+    {%for newsSource in sources%}
+    <li>{{newsSource.id}}{{newsSource.name}}</li>
+    {%endfor%}
+    </ul>
   </body>
 </html>
 
