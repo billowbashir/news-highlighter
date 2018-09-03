@@ -4,8 +4,9 @@ from app import app
 #  json modules will format the JSON response to a Python dictionary.
 import urllib.request,json
 
-from .models import source
+from .models import source,articles
 Source = source.Source
+Articles = articles.Articles
 
 # get the api key
 api_key=app.config['KEY']
@@ -54,14 +55,14 @@ def get_articles():
 
     # store the formatted url in get_source_url, send the request, read the response with url....
     # ...read and then store it in get_source_data then convert it to python dictionary using json.loads
-    get_article_url = base_url_articles.format(api_key)
+    get_articles_url = base_url_articles.format(api_key)
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data = url.read()
         get_articles_response = json.loads(get_articles_data)
 
         articles_results = None
 
-        if get_art_response['articles']:
+        if get_articles_response['articles']:
             articles_results_list = get_articles_response['articles']
             articles_results = process_article_results(articles_results_list)
 
