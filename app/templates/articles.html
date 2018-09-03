@@ -1,1 +1,7 @@
-<h1>welcome to articles section {{articles}}</h1>
+<h1>welcome to articles section</h1>
+{%for article in articles%}
+<h1>{{article.title}} author{{article.author}}</h1>
+<p>{{article.description}}</p>
+<a href="{{article.url}}"></a>
+<img src="{{article.urlToImage}}" alt="image of article">
+{%endfor%}
