@@ -5,10 +5,12 @@ from .request import get_source
 def index():
     news_sources=get_source()
     print(news_sources)
-    title='welcome to news highter'
+    title='welcome to news highlighter'
     return render_template('index.html', title=title, sources=news_sources)
 
 
 @app.route('/source/<string:articles>')
 def source(articles):
+    articles=get_articles()
+    print(articles)
     return render_template('articles.html',articles=articles)
