@@ -3,6 +3,6 @@
 <h1>{{article.title}} </h1>
 <h3>author: {{article.author }} source: {{article.source}}</h3>
 <p>{{article.description}}</p>
-
+<p>time of publishing {{ article.publishedAt}}</p>
 <div><img src="{{article.urlToImage}}" alt="image of article"></div>
 {%endfor%}
