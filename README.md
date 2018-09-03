@@ -9,3 +9,9 @@ The site obtains information on news sources and articles form a news API and di
 To run the application you need to have installed the following: Python3.6, flask-bootstrap, flask-wtf forms and flask-script
 ### known bugs
 Currently the application has no known bugs but if you come across any issues feel free to contact me from the email address provided below.
+### technologies used
+The technologies used to build the application are:
+1. Python
+2. Flask
+3. Bootstrap4
+4. css
