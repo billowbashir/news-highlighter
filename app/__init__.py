@@ -12,6 +12,9 @@ def create_app(config_name):
 # set up configurations
     app.config.from_object(config_options[config_name])
     # app.config.from_pyfile('config.py')
-
+    from .main import main as main_blueprint
+    app.register_blueprint(main_blueprint)
     # from app import views
     bootstrap.init_app(app)
+
+    return app
