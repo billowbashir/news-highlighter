@@ -9,7 +9,7 @@
     {%for newsSource in sources%}
     <div class='col-md-2 jumbotron'>
     <li>{{newsSource.id}}{{newsSource.name}}</li>
-    <a href="/articles/">Articles</a>
+    <a href="/articles/{{newsSource.id}}">Articles</a>
     </div>
     {%endfor%}
     </ul>
