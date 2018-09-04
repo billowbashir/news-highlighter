@@ -17,4 +17,8 @@ def create_app(config_name):
     # from app import views
     bootstrap.init_app(app)
 
+    # setting config
+    from .request import configure_request
+    configure_request(app)
+
     return app
