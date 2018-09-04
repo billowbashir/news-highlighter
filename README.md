@@ -16,6 +16,8 @@ The technologies used to build the application are:
 2. Flask
 3. Bootstrap4
 4. css
+### link to live site on heroku
+https://bashirs-news.herokuapp.com/
 ### Contact
 for any remarks,questions or advise feel free to email me at billowbashir@gmail.com
 ### licence
