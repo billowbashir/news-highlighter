@@ -48,14 +48,14 @@ def process_results(source_list):
         source_object = Source(id,name)
         source_results.append(source_object)
     return source_results
-def get_articles():
+def get_articles(source.id):
     '''
     Function that gets the json response to our url request
     '''
 
     # store the formatted url in get_source_url, send the request, read the response with url....
     # ...read and then store it in get_source_data then convert it to python dictionary using json.loads
-    get_articles_url = base_url_articles.format(api_key)
+    get_articles_url = base_url_articles.format(source.id,api_key)
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data = url.read()
         get_articles_response = json.loads(get_articles_data)
@@ -83,8 +83,7 @@ def process_article_results(articles_list):
 
     articles_results = []
     for article_item in articles_list:
-        id=article_item.get('source.id')
-        source=article_item.get('source.name')
+        source=article_item.get('source')
         author=article_item.get('author')
         title=article_item.get('title')
         description=article_item.get('description')
