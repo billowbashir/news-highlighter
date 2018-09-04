@@ -7,7 +7,7 @@
     <h2>News Sources</h2>
     <ul>
     {%for newsSource in sources%}
-    <div class='col-md-2 jumbotron'>
+    <div class='col-md-3 jumbotron'>
     <li>{{newsSource.id}}{{newsSource.name}}</li>
     <a href="/articles/{{newsSource.id}}">Articles</a>
     </div>

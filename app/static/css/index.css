@@ -2,6 +2,9 @@
   color:white;
   text-align: centre;
   margin: 50px;
-  background-color: black;
-
+  }
+.jumbotron:hover{
+  border-color: red;
+  opacity: 0.5;
+  
 }
