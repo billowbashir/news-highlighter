@@ -6,8 +6,8 @@ class Config:
     BASE_URL_SOURCE='https://newsapi.org/v2/sources?apiKey={}'
     BASE_URL_ARTICLES='https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
     # 'https://newsapi.org/v2/top-headlines?country=us&apiKey={}'
-    KEY=os.environ.get(KEY)
-
+    KEY=os.environ.get('KEY')
+    SECRET_KEY=os.environ.get('SECRET_KEY')
 class ProdConfig(Config):
     '''
     Production  configuration child class

@@ -4,19 +4,19 @@
 #  json modules will format the JSON response to a Python dictionary.
 import urllib.request,json
 
-from .models import source,articles
+from .models import Source,Articles
 # Source = source.Source
 # Articles = articles.Articles
 
 # get the api key
 # api_key=app.config['KEY']
-api_key=none
+api_key=None
 # get the base url
 # base_url_source=app.config['BASE_URL_SOURCE']
-base_url_source=none
+base_url_source=None
 # base_url_articles
 # base_url_articles=app.config['BASE_URL_ARTICLES']
-base_url_articles=none
+base_url_articles=None
 
 def configure_request(app):
     global api_key,base_url_source,base_url_articles
